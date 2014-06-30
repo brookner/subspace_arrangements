@@ -18,7 +18,7 @@ surf = (p, q, r, N) -> (
     )
 
 -- Computes for partition (q+r, q, r, r)
-surfOpt4 = (p, q, r, s, N) -> (
+surf4 = (p, q, r, s, N) -> (
     S := F[v_1..v_N, Degrees=>toList(1..N)];
     a := p/s;
     b := q/s;
@@ -43,16 +43,16 @@ guess = (p, q, r) -> (
     count - 1
     )
 
-guessOpt4 = (p, q, r, s) -> (
+guess4 = (p, q, r, s) -> (
     count := 2;
-    H := reduceHilbert hilbertSeries surfOpt4(p, q, r, s, 1);
-    H' := reduceHilbert hilbertSeries surfOpt4(p, q, r, s, 2);
+    H := reduceHilbert hilbertSeries surf4(p, q, r, s, 1);
+    H' := reduceHilbert hilbertSeries surf4(p, q, r, s, 2);
     while not compare(H, H') do (
 	H = H';
 	count = count+1;
-	H' = reduceHilbert hilbertSeries surfOpt4(p, q, r, s, count);
+	H' = reduceHilbert hilbertSeries surf4(p, q, r, s, count);
 	);
-    -- << "guessOpt4 for (" << p << "," << q << "," << r << ") " << count << "\n";
+    << "guess4 for (" << p << "," << q << "," << r << "," << s << ") " << count << "\n";
     count - 1
     )
 
@@ -66,15 +66,15 @@ isCM = (p, q, r) -> (
     length res I == codim I
     )
 
-isCMOpt4 = (p, q, r, s) -> (
-    g := guessOpt4(p, q, r, s);
-    I := surfOpt4(p, q, r, s, g);
+isCM4 = (p, q, r, s) -> (
+    g := guess4(p, q, r, s);
+    I := surf4(p, q, r, s, g);
     length res I == codim I
     )
 
 printMe = () -> (
-    for i from 1 to 3 do (
-	for j from 1 to 3 do (
-	    for k from 1 to 3 do (
-		"helloworld.txt" << "isCM(" << i << "," << j << "," << k << "): " << isCM(i,j,k) << endl; )));
+    for i from 1 to 4 do (
+	for j from 1 to i do (
+	    for k from 1 to j do (
+		"helloworld.txt" << "isCM(4," << i << "," << j << "," << k << "): " << isCM4(4,i,j,k) << endl; )));
     "helloworld.txt" << close;)

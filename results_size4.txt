@@ -1,0 +1,15 @@
+isCM(3,1,1,1): false
+isCM(3,2,1,1): false
+isCM(3,3,1,1): true
+isCM(3,2,2,1): false
+isCM(3,3,2,1): false
+isCM(3,3,3,1): true
+isCM(3,2,2,2): true
+isCM(3,3,2,2): true
+isCM(3,3,3,2): true
+isCM(3,3,3,3): true
+
+isCM4(4,1,1,1): true
+isCM4(4,3,1,1): false (this one took 32 seconds; this may be the characteristic time for this degree of symmetry when |\lambda|=4).
+isCM4(4,3,2,1): 
+isCM4(4,4,1,1): true
