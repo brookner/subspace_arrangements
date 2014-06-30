@@ -1,0 +1,1 @@
+Code to test the Cohen-Macaulayness of certain modules; part.m2 handles the entire module under consideration, while surface.m2 handles a certain ring of invariants, which is orders of magnitude easier to compute with, since it comes down (in the case of |\lambda| = 3) to the CM-ness of a surface (hence the filename).
