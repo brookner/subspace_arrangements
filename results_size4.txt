@@ -9,7 +9,25 @@ isCM(3,3,2,2): true
 isCM(3,3,3,2): true
 isCM(3,3,3,3): true
 
-isCM4(4,1,1,1): true
-isCM4(4,3,1,1): false (this one took 32 seconds; this may be the characteristic time for this degree of symmetry when |\lambda|=4).
-isCM4(4,3,2,1): 
-isCM4(4,4,1,1): true
+isCM4(partition): T/F (levels, time, time')
+
+isCM4(4,1,1,1): true (8, 0.81)
+isCM4(4,2,1,1): false (9, 29.7)
+isCM4(4,3,1,1): false (11, 56.2)
+isCM4(4,4,1,1): true (10, 4.3)
+isCM4(4,2,2,1): false (11, 75.8)
+isCM4(4,3,2,1):
+isCM4(4,4,2,1):
+isCM4(4,4,3,1):
+isCM4(4,4,4,1): true (9, 0.94)  
+isCM4(4,2,2,2): true (7,, 0.31)
+isCM4(4,3,2,2): false (11, 62.2)
+isCM4(4,4,2,2): true (8, 0.97)
+isCM4(4,4,3,2): 
+isCM4(4,4,4,2): true (9, 0.96)
+isCM4(4,3,3,3): true (9, 0.94)
+isCM4(4,4,3,3): true (10, 3.8)
+isCM4(4,4,4,3): true (9, 0.96)
+isCM4(4,4,4,4): true (6, 0.038)
+
+isCM4(5,5,3,3): true (10, 3.8)
