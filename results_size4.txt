@@ -17,13 +17,12 @@ isCM4(4,3,1,1): false (11, 56.2)
 isCM4(4,4,1,1): true (10, 4.3)
 isCM4(4,2,2,1): false (11, 75.8)
 isCM4(4,3,2,1):
-isCM4(4,3,2,2): false; Hilbert series is 1 + [sum_(i=5)^17 t^i ] - t^20 - t^21
 isCM4(4,4,2,1):
 isCM4(4,3,3,1):
 isCM4(4,4,3,1):
 isCM4(4,4,4,1): true (9, 0.94)  
 isCM4(4,2,2,2): true (7,, 0.31)
-isCM4(4,3,2,2): false (11, 62.2)
+isCM4(4,3,2,2): false (11, 62.2); also Hilbert series is 1 + [sum_(i=5)^17 t^i ] - t^20 - t^21
 isCM4(4,4,2,2): true (8, 0.97)
 isCM4(4,4,3,2): 
 isCM4(4,4,4,2): true (9, 0.96)
