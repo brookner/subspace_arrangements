@@ -9,7 +9,7 @@ isCM(3,3,2,2): true
 isCM(3,3,3,2): true
 isCM(3,3,3,3): true
 
-isCM4(partition): T/F (levels, time, time')
+isCM4(partition): T/F (levels, time)
 
 isCM4(4,1,1,1): true (8, 0.81)
 isCM4(4,2,1,1): false (9, 29.7)
@@ -31,20 +31,25 @@ isCM4(4,4,3,3): true (10, 3.8)
 isCM4(4,4,4,3): true (9, 0.96)
 isCM4(4,4,4,4): true (6, 0.038)
 
-isCM(5,1,1,1): true (9, 1.1)
-isCM(5,2,2,2): true (9, 1.1)
-isCM(5,3,3,3): true (9, 1.0)
-isCM(5,4,4,4): true (9, 1.1)
-isCM(5,5,1,1): true (10, 4.3)
-isCM(5,5,2,2): true (10, 4.4)
-isCM(5,5,3,3): true (10, 4.2)
-isCM(5,5,4,4): true (10, 4.2)
+isCM4(5,1,1,1): true (9, 1.1)
+isCM4(5,2,2,2): true (9, 1.1)
+isCM4(5,3,3,3): true (9, 1.0)
+isCM4(5,4,4,4): true (9, 1.1)
+isCM4(5,5,1,1): true (10, 4.3)
+isCM4(5,5,2,2): true (10, 4.4)
+isCM4(5,5,3,3): true (10, 4.2)
+isCM4(5,5,4,4): true (10, 4.2)
 
-isCM(6,6,1,1): true (10, 4.3)
-isCM(6,6,2,2): true (10, 4.2)
-isCM(6,6,3,3): true (10, 1.1)
-isCM(6,6,4,4): true (10, 4.7)
-isCM(6,6,5,5): true (10, 5.1)
+isCM4(6,6,1,1): true (10, 4.3)
+isCM4(6,6,2,2): true (10, 4.2)
+isCM4(6,6,3,3): true (10, 1.1)
+isCM4(6,6,4,4): true (10, 4.7)
+isCM4(6,6,5,5): true (10, 5.1)
 
-isCM(6,1,1,1): true (9, 1.4)
-isCM(6,5,5,5): true (9, 1.2)
+isCM4(6,1,1,1): true (9, 1.4)
+isCM4(6,5,5,5): true (9, 1.2)
+
+isCM5(3,2,2,2,2): true (9, 41.5)
+isCM5(3,3,2,2,2): false (10, 2053.4)
+isCM5(3,3,3,2,2): true (11, 5284.1)
+isCM5(3,3,3,3,2): 
