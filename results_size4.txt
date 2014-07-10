@@ -1,28 +1,31 @@
-isCM(3,1,1,1): false
-isCM(3,2,1,1): false
-isCM(3,3,1,1): true
-isCM(3,2,2,1): false
-isCM(3,3,2,1): false
-isCM(3,3,3,1): true
-isCM(3,2,2,2): true
-isCM(3,3,2,2): true
-isCM(3,3,3,2): true
-isCM(3,3,3,3): true
 
-isCM4(partition): T/F (levels, time)
+
+isCM4(3,1,1,1): false
+isCM4(3,2,1,1): false
+isCM4(3,3,1,1): true
+isCM4(3,2,2,1): false
+isCM4(3,3,2,1): false
+isCM4(3,3,3,1): true
+isCM4(3,2,2,2): true
+isCM4(3,3,2,2): true
+isCM4(3,3,3,2): true
+isCM4(3,3,3,3): true
+
+isCM4(partition): T/F	(levels, time) OR
+		  T/F/M (hilbert series * (1-t^2)(1-t^3)(1-t^4))
 
 isCM4(4,1,1,1): true (8, 0.81)
 isCM4(4,2,1,1): false (9, 29.7)
 isCM4(4,3,1,1): false (11, 56.2)
 isCM4(4,4,1,1): true (10, 4.3)
 isCM4(4,2,2,1): false (11, 75.8)
-isCM4(4,3,2,1):
-isCM4(4,4,2,1):
-isCM4(4,3,3,1):
-isCM4(4,4,3,1):
+isCM4(4,3,2,1): false (t^28+t^27+t^26-4t^24-4t^23-5t^22-2t^21+t^20+3t^19+4t^18+4t^17+4t^16+4t^15+3t^14+2t^13+2t^12+t^11+2t^10+t^9+t^8+t^7+t^6+t^5+1)
+isCM4(4,4,2,1): false (t^22-t^19-2t^18-t^17-t^16+t^15+t^14+2t^13+2t^12+2t^11+2t^10+t^9+t^8+t^7+t^6+t^5+1
+isCM4(4,3,3,1): maybe (t^13+t^12+2t^11+2t^10+t^9+t^8+t^7+t^6+t^5+1)
+isCM4(4,4,3,1): false (t^22-t^19-t^18-t^16+t^15+t^13+2t^12+2t^11+2t^10+t^9+t^8+t^7+t^6+t^5+1
 isCM4(4,4,4,1): true (9, 0.94)  
 isCM4(4,2,2,2): true (7,, 0.31)
-isCM4(4,3,2,2): false (11, 62.2); also Hilbert series is 1 + [sum_(i=5)^17 t^i ] - t^20 - t^21
+isCM4(4,3,2,2): false (11, 62.2)
 isCM4(4,4,2,2): true (8, 0.97)
 isCM4(4,4,3,2): 
 isCM4(4,4,4,2): true (9, 0.96)
@@ -49,7 +52,21 @@ isCM4(6,6,5,5): true (10, 5.1)
 isCM4(6,1,1,1): true (9, 1.4)
 isCM4(6,5,5,5): true (9, 1.2)
 
+isCM5(partition): T/F (levels, time)
+
 isCM5(3,2,2,2,2): true (9, 41.5)
 isCM5(3,3,2,2,2): false (10, 2053.4)
 isCM5(3,3,3,2,2): true (11, 5284.1)
-isCM5(3,3,3,3,2): 
+isCM5(3,3,3,3,2): true (9, 103.2)
+
+isCM5(4,1,1,1,1): false (t^21 - t^18 - t^17 - t^16+t^14+t^13+t^12+t^8+t^7+t^6+1)
+isCM5(4,3,3,3,3): true (9, 44.8)
+isCM5(4,4,3,3,3): true (11, 4766.6)
+isCM5(4,4,4,3,3): true (11, 5477.0)
+isCM5(4,4,4,4,3): true (9, 134.1)
+
+isCM5(5,2,2,2,2): true (9, 50.6)
+isCM5(5,5,2,2,2): true (11, 4993.3)
+isCM5(5,5,5,2,2): true (11, 5044.3)
+isCM5(5,5,5,5,2): true (9, 141)
+

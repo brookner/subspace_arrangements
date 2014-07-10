@@ -76,7 +76,7 @@ guess4 = (p, q, r, s) -> (
 	globalCount = count;
 	H'' = reduceHilbert hilbertSeries surf4(p, q, r, s, count);
 	);
-    << "guess4 for (" << p << "," << q << "," << r << "," << s << ") " << count << "\n";
+    << "guess4 for (" << p << "," << q << "," << r << "," << s << ") " << (count-2) << "\n";
     globalHilb = H;
     count - 2
     )
@@ -94,6 +94,22 @@ guess5 = (p, q, r, s, t) -> (
 	H'' = reduceHilbert hilbertSeries surf5(p, q, r, s, t, count);
 	);
     << "guess4 for (" << p << "," << q << "," << r << "," << s << "," << t << ") " << (count-2) << "\n";
+    globalHilb = H;
+    count - 2
+    )
+
+guessSpecialN = (a, b, r, s) -> (
+    count := 2;
+    H := reduceHilbert hilbertSeries surfSpecialN(a, b, r, s, 1);
+    H' := reduceHilbert hilbertSeries surfSpecialN(a, b, r, s, 2);
+    H'' := reduceHilbert hilbertSeries surfSpecialN(a, b, r, s, 3);
+    while not (compare(H, H') and compare(H, H'')) do (
+	H = H';
+	H' = H'';
+	count = count+1;
+	globalCount = count;
+	H'' = reduceHilbert hilbertSeries surfSpecialN(a, b, r, s, count);
+	);
     globalHilb = H;
     count - 2
     )
