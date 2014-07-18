@@ -10,8 +10,7 @@ introducing error seems greater than the benefit.
 
 Generic Hilbert series: 1 + T^4 + T^5
 Values where differs: a=2
-Roots of denominators of a: -2, -1 (I was wrong in meeting on 7/17 claiming that 1 was a root; Prof. Etingof's claim that the lambda_1=2 
-cases would generally be weird seems to be accurate though, as evinced by the (a+1, a, 1) family described below)
+Roots of denominators of a: -2, -1, 0, 2 (I neglected to mention on 7/17 that 0 and -2 are roots)
 
 P6 = -(-2 + 3 a - 3 a^2)/(a (2 + 3 a + a^2)) * P3^2
      - (5 - 3 a + a^2)/(2 (2 + 3 a + a^2)) * P2^3
