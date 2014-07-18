@@ -1,3 +1,5 @@
+If you're looking for a family, search for (a,1,1), (a+1,a,1,1), or the like.
+
 isCM4(3,1,1,1): false
 isCM4(3,2,1,1): false
 isCM4(3,3,1,1): true
