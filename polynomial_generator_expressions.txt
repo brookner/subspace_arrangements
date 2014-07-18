@@ -1,0 +1,50 @@
+General phenomena: The systems are determined by as many variables as there are. For example, for generating P10 in the (a+1, a, 1) family, P10 has 11 coefficients and there are 8 ways to pick elements of C[P2, P3] such that the degrees match up with the generators to add up to 10. Any 8 coefficients seems to give a determined system, i.e. all {11 choose 8} systems seem to be independent.
+
+Note Mathematica does some silly things, like in the last of the coefficients of P10 (in front of the P2*P8), it adds a minus sign to all the coefficients in the numerator, and outside the numerator. I haven't bothered to try and pretty-ify it -- the risk of introducing error seems greater than the benefit.
+
+(a, 1, 1):
+
+Generic Hilbert series: 1 + T^4 + T^5
+Values where differs: a=2
+Roots of denominators of a: -2, -1 (I was wrong in meeting on 7/17 claiming that 1 was a root; Prof. Etingof's claim that the lambda_1=2 cases would generally be weird seems to be accurate though, as evinced by the (a+1, a, 1) family described below)
+
+P6 = -(-2 + 3 a - 3 a^2)/(a (2 + 3 a + a^2)) * P3^2
+     - (5 - 3 a + a^2)/(2 (2 + 3 a + a^2)) * P2^3
+     + (1/2 + (5 - 3 a + a^2)/(2 + 3 a + a^2)) * P2 * P4
+
+P7 = -(2 + 5 a - a^2 + a^3)/(2 a (2 + 3 a + a^2)) * P2^2 * P3
+     -(-5 - a^2)/(2 + 3 a + a^2) * P2 * P5
+     -(-4 + 2 a - 5 a^2 - a^3)/(2 a (2 + 3 a + a^2)) * P3 * P4
+
+P8 = (1/8 + (-92 + 34 a - 49 a^2 + 2 a^3 - 3 a^4)/(8 (2 + 3 a + a^2)^2)) * P2^4
+     -(24 - 88 a + 72 a^2 - 37 a^3 + 19 a^4 + a^5 + a^6)/(2 (-2 + a) a (2 + 3 a + a^2)^2) * P2 * P3^2
+     -(-92 + 34 a - 49 a^2 + 2 a^3 - 3 a^4)/(4 (2 + 3 a + a^2)^2) * P2^2 * P4
+     -(4 - 2 a + 5 a^2 - 2 a^3 - a^4)/((-2 + a) a (2 + 3 a + a^2)) * P3 * P5
+
+P9 = -((-8 + 12 a - 14 a^2 + 15 a^3 - 11 a^4 - 3 a^5 + a^6)/(2 a^2 (2 + 3 a + a^2)^2)) * P3^3
+     -((3 (12 + 12 a + 9 a^2 + 2 a^3 + a^5))/(4 a (2 + 3 a + a^2)^2)) * P2^3 * P3
+     +(9 (8 - 4 a + 10 a^2 - a^3 + 2 a^4 + a^5))/(4 a (2 + 3 a + a^2)^2) * P2 * P3 * P4
+     +(9 (2 + a^2))/(2 + 3 a + a^2)^2 * P2^2 * P5
+
+
+(a+1, a, 1):
+
+Generic Hilbert series: 1 + T^4 + T^5 + T^6 + T^7 + T^8
+Values where differs: a=1, 2
+Roots of denominators of a: -1/2, 1/2, -2, -1, 2
+
+P9 = ((9 (2 - a^2 + 2 a^4))/(4 + 4 a - 17 a^2 - 17 a^3 + 4 a^4 + 4 a^5)) * P2 * P7
+   + (3 (2 + 4 a + 5 a^2 + 4 a^3 + 2 a^4))/(2 a (1 + a) (2 + 5 a + 2 a^2)) * P3 * P6
+   - (27 (1 + a^2 + a^4))/((1 + a)^2 (4 - 17 a^2 + 4 a^4)) * P2^2 * P5
+   - (9 (8 - 6 a + 16 a^2 - 27 a^3 + 16 a^4 - 6 a^5 + 8 a^6))/(4 a (1 + a)^2 (4 - 17 a^2 + 4 a^4)) * P3 * P2 * P4
+   - (2 + 11 a^2 + 11 a^4 + 2 a^6)/(2 a^2 (1 + a)^2 (2 + 5 a + 2 a^2)) * P3^3
+   + (3 (10 + 18 a + 27 a^2 + 11 a^3 + 27 a^4 + 18 a^5 + 10 a^6))/(4 a (1 + a)^3 (4 - 17 a^2 + 4 a^4)) * P3 * P2^3
+
+P10 = -((-16 - 96 a + 80 a^2 - 298 a^3 + 398 a^4 - 857 a^5 + 804 a^6 - 857 a^7 + 398 a^8 - 298 a^9 + 80 a^10 - 96 a^11 - 16 a^12)/(2 a^2 (1 + a)^3 (16 - 24 a - 16 a^2 + 78 a^3 - 189 a^4 + 78 a^5 - 16 a^6 - 24 a^7 + 16 a^8))) * P2^2 * P3^2
+      -(26 - 10 a + 49 a^2 - 49 a^3 + 49 a^4 - 10 a^5 + 26 a^6)/(4 (1 + a)^4 (8 + 8 a + 4 a^2 + 41 a^3 + 4 a^4 + 8 a^5 + 8 a^6)) * P2^5
+      -(4 + 2 a + 14 a^2 - 17 a^3 + 11 a^4 - 17 a^5 + 14 a^6 + 2 a^7 + 4 a^8)/(a^2 (1 + a)^2 (4 - 17 a^2 + 4 a^4)) * P3^2 * P^4
+      -(-112 + 32 a - 200 a^2 + 155 a^3 - 200 a^4 + 32 a^5 - 112 a^6)/(4 (1 + a)^3 (8 + 8 a + 4 a^2 + 41 a^3 + 4 a^4 + 8 a^5 + 8 a^6)) * P2^3 * P4
+      -(80 - 144 a + 336 a^2 - 510 a^3 + 844 a^4 - 969 a^5 + 844 a^6 - 510 a^7 + 336 a^8 - 144 a^9 + 80 a^10)/(a (1 + a)^2 (16 - 24 a - 16 a^2 + 78 a^3 - 189 a^4 + 78 a^5 - 16 a^6 - 24 a^7 + 16 a^8)) * P2 * P3 * P5
+      -(88 - 8 a + 140 a^2 - 35 a^3 + 140 a^4 - 8 a^5 + 88 a^6)/(2 (1 + a)^2 (8 + 8 a + 4 a^2 + 41 a^3 + 4 a^4 + 8 a^5 + 8 a^6)) * P2^2 * P6
+      -(2 (4 + 2 a - 2 a^2 - 5 a^3 - 2 a^4 + 2 a^5 + 4 a^6))/(a (1 + a) (4 - 17 a^2 + 4 a^4)) * P3 * P7
+      -(-64 - 16 a - 80 a^2 - 85 a^3 - 80 a^4 - 16 a^5 - 64 a^6)/(2 (1 + a) (8 + 8 a + 4 a^2 + 41 a^3 + 4 a^4 + 8 a^5 + 8 a^6)) P2 * P8
