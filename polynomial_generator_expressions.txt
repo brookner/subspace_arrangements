@@ -1,12 +1,17 @@
-General phenomena: The systems are determined by as many variables as there are. For example, for generating P10 in the (a+1, a, 1) family, P10 has 11 coefficients and there are 8 ways to pick elements of C[P2, P3] such that the degrees match up with the generators to add up to 10. Any 8 coefficients seems to give a determined system, i.e. all {11 choose 8} systems seem to be independent.
+General phenomena: The systems are determined by as many variables as there are. For example, for generating P10 in the (a+1, a, 1) family, 
+P10 has 11 coefficients and there are 8 ways to pick elements of C[P2, P3] such that the degrees match up with the generators to add up to 
+10. Any 8 coefficients seems to give a determined system, i.e. all {11 choose 8} systems seem to be independent.
 
-Note Mathematica does some silly things, like in the last of the coefficients of P10 (in front of the P2*P8), it adds a minus sign to all the coefficients in the numerator, and outside the numerator. I haven't bothered to try and pretty-ify it -- the risk of introducing error seems greater than the benefit.
+Note Mathematica does some silly things, like in the last of the coefficients of P10 (in front of the P2*P8), it adds a minus sign to all 
+the coefficients in the numerator, and outside the numerator. I haven't bothered to try and pretty-ify it -- the risk of introducing error 
+seems greater than the benefit.
 
 (a, 1, 1):
 
 Generic Hilbert series: 1 + T^4 + T^5
 Values where differs: a=2
-Roots of denominators of a: -2, -1 (I was wrong in meeting on 7/17 claiming that 1 was a root; Prof. Etingof's claim that the lambda_1=2 cases would generally be weird seems to be accurate though, as evinced by the (a+1, a, 1) family described below)
+Roots of denominators of a: -2, -1 (I was wrong in meeting on 7/17 claiming that 1 was a root; Prof. Etingof's claim that the lambda_1=2 
+cases would generally be weird seems to be accurate though, as evinced by the (a+1, a, 1) family described below)
 
 P6 = -(-2 + 3 a - 3 a^2)/(a (2 + 3 a + a^2)) * P3^2
      - (5 - 3 a + a^2)/(2 (2 + 3 a + a^2)) * P2^3
