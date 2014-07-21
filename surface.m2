@@ -97,7 +97,6 @@ guess5 = (p, q, r, s, t) -> (
 	globalCount = count;
 	H'' = reduceHilbert hilbertSeries surf5(p, q, r, s, t, count);
 	);
-    << "guess4 for (" << p << "," << q << "," << r << "," << s << "," << t << ") " << (count-2) << endl;
     globalHilb = H;
     count - 2
     )
@@ -128,4 +127,16 @@ isCM5 = (p, q, r, s, t) -> (
     I := surf5(p, q, r, s, t, g);
     state = "Calculating pdim";
     length res I == codim I
+    )
+
+hilb4 = (p, q, r, s) -> (
+    g := guess4(p,q,r,s);
+    hilb := reduceHilbert hilbertSeries surf4(p,q,r,s,g);
+    toString hilb
+    )
+
+hilb5 = (p, q, r, s, t) -> (
+    g := guess5(p,q,r,s,t);
+    hilb := reduceHilbert hilbertSeries surf5(p,q,r,s,t,g);
+    toString hilb
     )
