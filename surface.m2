@@ -129,6 +129,12 @@ isCM5 = (p, q, r, s, t) -> (
     length res I == codim I
     )
 
+hilb = (p, q, r) -> (
+    g := guess(p,q,r);
+    hilb := reduceHilbert hilbertSeries surf(p,q,r,g);
+    toString hilb
+    )
+
 hilb4 = (p, q, r, s) -> (
     g := guess4(p,q,r,s);
     hilb := reduceHilbert hilbertSeries surf4(p,q,r,s,g);
