@@ -46,7 +46,7 @@ P11 = -((192 - 544 a + 560 a^2 - 728 a^3 + 542 a^4 - 213 a^5 + 70 a^6 + 56 a^7 -
 
 Generic Hilbert series: 1 + T^4 + T^5
 Values where differs: a=1
-Roots of denominators of a: -1, -1/2, 0
+Roots of denominators of a: -1, -1/2, 0, 1/2
 
 P6 = -((-3 + 3 a - 2 a^2)/(1 + 3 a + 2 a^2)) * P3^2
      -((1 - 3 a + 5 a^2)/(2 a^2 (1 + a) (1 + 2 a))) * P2^3
@@ -100,6 +100,12 @@ P11 = -((32 - 128 a + 144 a^2 - 56 a^3 + 842 a^4 + 807 a^5 + 1335 a^6 + 807 a^7 
       -((-32 - 32 a - 40 a^2 - 24 a^3 - 41 a^4 - 24 a^5 - 40 a^6 - 32 a^7 - 32 a^8)/(2 a (1 + a) (2 + 5 a + 2 a^2) (4 - 6 a + 13 a^2 - 6 a^3 + 4 a^4))) *
       P3 * P8
 
+(a, 1, 1 ,1):
+
+Generic Hilbert series: 1 + T^5 + T^6 + T^7
+Values whre differs: a=1,2
+Roots of denominators of a: -3, -2, -1, 0, 2, 3
+
 (a, a, 1, 1):
 
 Generic Hilbert series: 1 + T^5 + T^6 + T^7 + T^8 + T^10
@@ -146,7 +152,7 @@ P12 = -((-4 - 48 a + 139 a^2 - 156 a^3 + 139 a^4 - 48 a^5 - 4 a^6)/(16 a^2 (1 + 
 (a+1, a, 1, 1):
 
 Generic Hilbert series: 1 + T^5 + T^6 + T^7 + T^8 + T^9 + 2T^10 + 2T^11 + T^12 + T^13
-Values where differs: a=1, 2, 3
+Values where differs: a=1/2, 1, 3/2, 2, 3
 Roots of denominators of a: -3, -2, -3/2, -1, -1/2, 0, 1/2, 1, 3/2, 2, 3
 
 P14 = -((-11664 + 52488 a - 106272 a^2 + 2556 a^3 + 27159 a^4 - 93757 a^5 - 

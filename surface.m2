@@ -108,6 +108,7 @@ guess5 = (p, q, r, s, t) -> (
 isCM = (p, q, r) -> (
     g := guess(p, q, r);
     I := surf(p, q, r, g);
+    print codim I;
     length res I == codim I
     )
 
