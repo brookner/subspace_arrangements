@@ -10,18 +10,18 @@ f = 0;
 S = 0;
 mat = 0;
 
-presentR = (N) -> (
+presentP = (N) -> (
     S = F[z_1..z_N, Degrees=>{2..N+1}];
     f = map(R, S, apply(N, i->P(i+2)));
     ker f )
 
-generateR = () -> (
+generateP = () -> (
     count = 2;
-    H := reduceHilbert hilbertSeries presentR(1);
-    H' := reduceHilbert hilbertSeries presentR(2);
+    H := reduceHilbert hilbertSeries presentP(1);
+    H' := reduceHilbert hilbertSeries presentP(2);
     while not compare(H, H') do (
 	H = H';
-	H' = reduceHilbert hilbertSeries presentR(count+1);
+	H' = reduceHilbert hilbertSeries presentP(count+1);
 	count = count+1;
 	);
     << "Hilbert series for R: " << (toString H) << endl;
@@ -35,13 +35,13 @@ generateR = () -> (
 --reduceHilbert hilbertSeries coimage g
 
 -- Before, mat went from Q(2) to Q(N). I'm changing it to start at Q(1) now
-presentP = (N) -> (
+presentM = (N) -> (
     mat = matrix(Q(2));
     for i from 3 to N do mat=(mat|matrix(Q(i)));
     g = map(R^2, S^(-toList(2..N)), f, mat);
     coimage g )
 
-generateP = () -> (
+generateM = () -> (
     count = 3;
     H := reduceHilbert hilbertSeries presentP(2);
     H' := reduceHilbert hilbertSeries presentP(3);
@@ -50,6 +50,6 @@ generateP = () -> (
 	count = count+1;
 	H' = reduceHilbert hilbertSeries presentP(count);
 	);
-    << "Hilbert series for P: " << (toString H) << endl;
+    << "Hilbert series for M: " << (toString H) << endl;
     count - 1
     )
