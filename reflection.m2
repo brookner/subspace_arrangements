@@ -34,7 +34,6 @@ generateP = () -> (
 --g=map(R^2, S^(-toList(2..m)), f, mat);
 --reduceHilbert hilbertSeries coimage g
 
--- Before, mat went from Q(2) to Q(N). I'm changing it to start at Q(1) now
 presentM = (N) -> (
     mat = matrix(Q(2));
     for i from 3 to N do mat=(mat|matrix(Q(i)));
