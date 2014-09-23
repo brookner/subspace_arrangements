@@ -11,7 +11,7 @@ a=random(1,20)/random(1,10);
 initialize(a);
 compare = (H1, H2) -> ((numerator H1) * (value denominator H2) == (numerator H2) * (value denominator H1))
 
--- Global variable
+-- Global variables
 f = 0;
 S = 0;
 mat = 0;
